@@ -89,9 +89,9 @@ if __name__ == "__main__":
     table, sings, not_negative, min = get_table()
     table, method = get_canon_view(table, sings, not_negative, min)
     if method == 1:
-        M_method(table, min)
+        M_method(table, min, message=True)
     else:
-        simplex(table, min)
+        simplex(table, min, message=True)
 
 
 """
