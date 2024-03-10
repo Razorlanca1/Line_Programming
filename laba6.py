@@ -72,7 +72,7 @@ def potential_method(a, b, c):
                     if i == (ci, cj) != t:
                         fin = True
                         break
-                    if i in was or len(new_base) > 2 and new_base[-2][1] == i[1]:
+                    if i in was:
                         continue
                     q.append((i, tec_dfs + 1))
                     add = True
@@ -81,7 +81,7 @@ def potential_method(a, b, c):
                     if i == (ci, cj) != t:
                         fin = True
                         break
-                    if i in was or len(new_base) > 2 and new_base[-2][0] == i[0]:
+                    if i in was:
                         continue
                     q.append((i, tec_dfs + 1))
                     add = True
@@ -105,7 +105,7 @@ def potential_method(a, b, c):
 
 
 if __name__ == "__main__":
-    """a = [100, 250, 200, 300]
+    a = [100, 250, 200, 300]
     b = [200, 200, 100, 100, 250]
     c = [[10, 7, 4, 1, 4],
          [2, 7, 10, 6, 11],
@@ -116,5 +116,5 @@ if __name__ == "__main__":
     b = [270, 130, 190, 150, 110]
     c = [[24, 50, 45, 27, 15],
          [20, 32, 40, 35, 30],
-         [22, 16, 18, 28, 20]]
+         [22, 16, 18, 28, 20]]"""
     x, z, base = potential_method(a, b, c)
